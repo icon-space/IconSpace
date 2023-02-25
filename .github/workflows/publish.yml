@@ -18,12 +18,11 @@ jobs:
               with:
                   version: 7
 
-            - name: Set node version to 16.x
+            - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v3
               with:
-                  node-version: 16.x
-                  registry-url: https://registry.npmjs.org/
-                  cache: "pnpm"
+                  node-version: ${{ matrix.node-version }}
+                  cache: 'pnpm'
 
             - name: Install deps
               run: pnpm i
