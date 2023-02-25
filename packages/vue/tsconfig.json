@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "strict": true,
+        "rootDir": ".",
+        "jsx": "preserve",
+        "declaration": true,
+        "declarationDir": "./",
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "preserveSymlinks": true,
+        "resolveJsonModule": true,
+        "removeComments": true,
+        "experimentalDecorators": true,
+        "skipLibCheck": true,
+        "baseUrl": "./",
+        "typeRoots": []
+    },
+    "exclude": []
+}

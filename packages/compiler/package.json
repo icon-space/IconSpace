@@ -1,0 +1,24 @@
+{
+    "name": "@icon-space/compiler",
+    "version": "0.0.0",
+    "description": "图标编译工具",
+    "main": "index.ts",
+    "module": "es/index.js",
+    "typings": "lib/index.d.ts",
+    "keywords": [],
+    "license": "MIT",
+    "scripts": {
+        "build": ""
+    },
+    "devDependencies": {
+        "@types/css-tree": "^2.3.1",
+        "@types/lodash": "^4.14.191",
+        "@types/tinycolor2": "^1.4.3",
+        "css-tree": "^2.3.1",
+        "tinycolor2": "^1.6.0",
+        "xml-js": "^1.6.11"
+    },
+    "dependencies": {
+        "lodash": "^4.17.21"
+    }
+}

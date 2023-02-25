@@ -1,0 +1,6 @@
+name: Publish Package
+
+on:
+    push:
+        tags:
+            - "v*"
