@@ -19,7 +19,7 @@ jobs:
                   version: 7
 
             - name: Install deps
-              run: pnpm i --shamefully-hoist && pnpm -r install --shamefully-hoist
+              run: pnpm i --shamefully-hoist
 
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v3
