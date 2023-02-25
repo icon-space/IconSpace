@@ -15,6 +15,8 @@ flowRuntimeTemplate.json
 **_scsslint_**
 .DS_Store
 
+pnpm-lock.yaml
+
 
 source/db-fixed.csv
 source/icons-config.json
