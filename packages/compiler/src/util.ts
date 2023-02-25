@@ -1,4 +1,4 @@
-import tinyColor from 'tinyColor2'
+import tinyColor from 'tinycolor2'
 import cssTree from 'css-tree'
 
 /**

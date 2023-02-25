@@ -46,8 +46,8 @@ fs.readdirSync(path.join(__dirname, '../source')).forEach(dir => {
             }
 
             ALL_ICON_MAP[key] = [dir, fs.readFileSync(filePath, 'utf8')]
-
-            console.log(key, dir)
+            //
+            // console.log(key, dir)
         })
     }
 })

@@ -117,11 +117,13 @@ function createBuildTask(name: 'react' | 'vue' | 'svg' | 'vue-next'): string {
     const cwd = path.resolve(process.cwd(), 'packages/', name)
 
     gulp.task('build-script-' + name, () => {
+
         const result = gulp
             .src(['src/*.ts', 'src/*.tsx', 'src/**/*.ts', 'src/**/*.tsx'], {
                 cwd
             })
             .pipe(ts(TS_CONFIG_MAP[name].compilerOptions))
+
 
         const jsResultStream = result.js
         const dtsResultStream = result.dts
@@ -145,14 +147,14 @@ function createBuildTask(name: 'react' | 'vue' | 'svg' | 'vue-next'): string {
     if (name !== 'svg') {
         gulp.task('build-css-' + name, () => {
             return gulp
-                .src('src/runtime/index.less', { cwd })
+                .src('src/runtime/index.less', { cwd, allowEmpty: true })
                 .pipe(less())
                 .pipe(cleanCss())
                 .pipe(gulp.dest(cwd + '/styles'))
         })
 
         gulp.task('build-less-' + name, () => {
-            return gulp.src('src/runtime/index.less', { cwd }).pipe(gulp.dest(cwd + '/styles'))
+            return gulp.src('src/runtime/index.less', { cwd, allowEmpty: true }).pipe(gulp.dest(cwd + '/styles'))
         })
         tasks.push('build-css-' + name, 'build-less-' + name)
     }
