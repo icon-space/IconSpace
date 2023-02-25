@@ -19,16 +19,13 @@ jobs:
                   version: 7
 
             - name: Install deps
-              run: pnpm i
+              run: pnpm i --shamefully-hoist
 
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: 'pnpm'
-
-            - name: View
-              run: cat .npmrc && ls -la
 
             - name: Compiler
               run:  pnpm compiler
