@@ -1,6 +1,9 @@
 {
     "name": "@icon-space/svg",
     "description": "Pure Svg Icons for IconSpace",
+    "scripts": {
+        "pub": "pnpm publish"
+    },
     "version": "0.0.1-alpha.0",
     "main": "lib/index.js",
     "module": "es/index.js",
@@ -14,6 +17,15 @@
         "component",
         "components",
         "design"
+    ],
+    "files": [
+        "es",
+        "lib",
+        "styles",
+        "README.md",
+        "icons.json",
+        "LICENSE",
+        "package.json"
     ],
     "homepage": "",
     "bugs": {

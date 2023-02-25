@@ -2,6 +2,9 @@
     "name": "@icon-space/vue",
     "version": "0.0.1-alpha.0",
     "description": "Vue Icons for IconSpace",
+    "scripts": {
+        "pub": "pnpm publish"
+    },
     "main": "lib/index.js",
     "module": "es/index.js",
     "typings": "lib/index.d.ts",
@@ -15,6 +18,15 @@
         "component",
         "components",
         "design"
+    ],
+    "files": [
+        "es",
+        "lib",
+        "styles",
+        "README.md",
+        "icons.json",
+        "LICENSE",
+        "package.json"
     ],
     "homepage": "",
     "bugs": {

@@ -13,7 +13,7 @@ module.exports = {
         { value: 'chore', name: '🚀chore:    构建过程或辅助工具的变动' },
         { value: 'revert', name: '⏪️revert:   回退' },
         { value: 'build', name: '📦️build:    打包' },
-        { value: 'ci', name: '👷CI:   related changes' }
+        { value: 'ci', name: '👷CI:   自动化' }
     ],
     // override the messages, defaults are as follows
     messages: {
