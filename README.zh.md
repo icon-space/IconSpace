@@ -30,7 +30,7 @@
 
 #### 发布流程
 
-1. 修改 `packages/react/package.json` `packages/react/package.json` `packages/react/package.json` `packages/react/package.json` 版本号
+1. 修改 `packages/react/package.json` `packages/svg/package.json` `packages/vue/package.json` `packages/vue-next/package.json` 版本号
 2. 提交代码
 3. 在仓库创建`release`，`github action`会自动发布
 

@@ -32,7 +32,7 @@ Import an icon from `@icon-space/vue`at the top of a component and then use it i
 
 ``` vue
 <template>
-<home theme="filled"/>
+    <home theme="filled"/>
 </template>
 <script>
 import {Home} from '@icon-space/vue';
@@ -69,9 +69,9 @@ You can use the 'provide' property provided by `Vue` to set the global configura
 
 ```html
 <template>
-<div>
-<home/>
-</div>
+    <div>
+        <home/>
+    </div>
 </template>
 <script lang="ts">
 import {DEFAULT_ICON_CONFIGS} from '@icon-space/vue'
@@ -123,8 +123,8 @@ Usage:
 
 ``` vue
 <template>
-<icon-space type="AddText" theme="filled"/>
-<icon-space type="add-text" theme="filled"/>
+    <icon-space type="AddText" theme="filled"/>
+    <icon-space type="add-text" theme="filled"/>
 </template>
 <script>
 import {IconSpace} from '@icon-space/vue/es/all';

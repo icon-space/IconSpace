@@ -32,7 +32,7 @@ Import an icon from `@icon-space/vue-next`at the top of a component and then use
 
 ``` vue
 <template>
-<home theme="filled"/>
+    <home theme="filled"/>
 </template>
 <script>
 import {Home} from '@icon-space/vue-next';
@@ -71,9 +71,9 @@ You can use `IconProvider` in `@icon-space/vue-next` to set the default config g
 
 ```html
 <template>
-<div>
-<home/>
-</div>
+    <div>
+        <home/>
+    </div>
 </template>
 <script lang="ts">
 import {DEFAULT_ICON_CONFIGS, IconProvider} from '@icon-space/vue-next';
@@ -121,8 +121,8 @@ Usage:
 
 ``` vue
 <template>
-<icon-space type="AddText" theme="filled"/>
-<icon-space type="add-text" theme="filled"/>
+    <icon-space type="AddText" theme="filled"/>
+    <icon-space type="add-text" theme="filled"/>
 </template>
 <script>
 import {IconSpace} from '@icon-space/vue-next/es/all';

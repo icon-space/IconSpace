@@ -32,7 +32,7 @@ npm install @icon-space/vue-next --save
 
 ``` vue
 <template>
-<home theme="filled"/>
+    <home theme="filled"/>
 </template>
 <script>
 import {Home} from '@icon-space/vue-next';
@@ -71,9 +71,9 @@ import '@icon-space/vue-next/styles/index.css';
 
 ```html
 <template>
-<div>
-<home/>
-</div>
+    <div>
+        <home/>
+    </div>
 </template>
 <script lang="ts">
 import {DEFAULT_ICON_CONFIGS, IconProvider} from '@icon-space/vue-next/es/runtime';
@@ -121,8 +121,8 @@ export default {
 
 ``` vue
 <template>
-<icon-space type="AddText" theme="filled"/>
-<icon-space type="add-text" theme="filled"/>
+    <icon-space type="AddText" theme="filled"/>
+    <icon-space type="add-text" theme="filled"/>
 </template>
 <script>
 import {IconSpace} from '@icon-space/vue-next/es/all';

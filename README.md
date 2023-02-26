@@ -30,6 +30,6 @@ The project will automatically generate the corresponding `react` `svg` `vue` `v
 
 #### Publish
 
-1. Modify `packages/react/package.json` `packages/react/package.json` `packages/react/package.json` `packages/react/package.json` versions
+1. Modify `packages/react/package.json` `packages/svg/package.json` `packages/vue/package.json` `packages/vue-next/package.json` versions
 2. submit
 3. create a new `release`，`github action` will automatic publishing
