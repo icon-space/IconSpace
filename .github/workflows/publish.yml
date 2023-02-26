@@ -21,10 +21,11 @@ jobs:
             - name: Install deps
               run: pnpm i --no-frozen-lockfile --shamefully-hoist
 
-            - name: Use Node.js ${{ matrix.node-version }}
+            - name: Use Node.js
               uses: actions/setup-node@v3
               with:
-                  node-version: ${{ matrix.node-version }}
+                  node-version: 18
+                  registry-url: 'https://registry.npmjs.org/'
                   cache: 'pnpm'
 
             - name: Clean
@@ -36,8 +37,8 @@ jobs:
             - name: Build
               run: pnpm build
 
-            - name: Publish All Packages
+            - name: publish
               run: pnpm -r run pub
               env:
-                  NODE_AUTH_TOKEN: '${{ secrets.NPM_TOKEN }}'
+                  NODE_AUTH_TOKEN: '${{secrets.NPM_TOKEN}}'
 

@@ -1,7 +1,8 @@
 {
     "name": "@icon-space/vue-next",
-    "version": "0.0.1-alpha.0",
+    "version": "0.0.1-alpha.1",
     "description": "Vue3 Icons for IconSpace",
+    "author": "lhlyu",
     "scripts": {
         "pub": "pnpm publish --no-git-checks"
     },
@@ -28,13 +29,13 @@
         "LICENSE",
         "package.json"
     ],
-    "homepage": "",
+    "homepage": "https://github.com/icon-space/IconSpace/packages/vue-next",
     "bugs": {
-        "url": ""
+        "url": "https://github.com/icon-space/IconSpace/issues"
     },
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/icon-space/IconSpace"
     },
     "license": "Apache-2.0",
     "engines": {
@@ -42,7 +43,8 @@
         "npm": ">= 5.0.0"
     },
     "publishConfig": {
-        "access": "public"
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
     },
     "sideEffects": [
         "styles/**"

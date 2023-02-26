@@ -1,10 +1,11 @@
 {
     "name": "@icon-space/svg",
     "description": "Pure Svg Icons for IconSpace",
+    "author": "lhlyu",
     "scripts": {
         "pub": "pnpm publish --no-git-checks"
     },
-    "version": "0.0.1-alpha.0",
+    "version": "0.0.1-alpha.1",
     "main": "lib/index.js",
     "module": "es/index.js",
     "typings": "lib/index.d.ts",
@@ -27,13 +28,13 @@
         "LICENSE",
         "package.json"
     ],
-    "homepage": "",
+    "homepage": "https://github.com/icon-space/IconSpace/packages/svg",
     "bugs": {
-        "url": ""
+        "url": "https://github.com/icon-space/IconSpace/issues"
     },
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/icon-space/IconSpace"
     },
     "license": "Apache-2.0",
     "engines": {
@@ -41,7 +42,8 @@
         "npm": ">= 5.0.0"
     },
     "publishConfig": {
-        "access": "public"
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
     },
     "sideEffects": [
         "styles/**"
