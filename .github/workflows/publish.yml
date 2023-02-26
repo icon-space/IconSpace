@@ -39,5 +39,5 @@ jobs:
             - name: Publish All Packages
               run: pnpm -r run pub
               env:
-                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+                  NODE_AUTH_TOKEN: '${{ secrets.NPM_TOKEN }}'
 
