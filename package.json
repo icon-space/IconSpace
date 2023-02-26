@@ -4,6 +4,7 @@
     "version": "0.0.0",
     "scripts": {
         "fmt": "prettier --write ./**/*.ts ./packages",
+        "clean": "sh scripts/clean.sh",
         "compiler": "sh scripts/compiler.sh",
         "build": "gulp",
         "prepare": "husky install",
@@ -39,7 +40,6 @@
         "csv-parse": "^4.16.3",
         "csv-stringify": "^6.2.4",
         "cz-customizable": "^7.0.0",
-        "esno": "^0.16.3",
         "gulp": "^4.0.2",
         "gulp-babel": "^8.0.0",
         "gulp-clean-css": "^4.3.0",

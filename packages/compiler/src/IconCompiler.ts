@@ -1,3 +1,5 @@
+import fs from "fs";
+import path from "path";
 import { compiler } from './compiler'
 import { IndexGenerator } from './generator/IndexGenerator'
 import { LessGenerator } from './generator/LessGenerator'
@@ -28,14 +30,19 @@ import { JSXGenerator } from './generator/JSXGenerator'
 import { SvgGenerator } from './generator/SvgGenerator'
 import { FixMaskTypeTransformer } from './transformer/FixMaskTypeTransformer'
 
-import templateVueShimTsx from './template/vue-shim-tsx.d.ts.txt'
-import templateVueIndex from './template/vue-index.ts.txt'
-import templateVueAll from './template/vue-all.ts.txt'
-import templateVueNextIndex from './template/vue-next-index.ts.txt'
-import templateVueNextAll from './template/vue-next-all.ts.txt'
-import templateSvgIndex from './template/svg-index.ts.txt'
-import templateReactIndex from './template/react-index.ts.txt'
-import templateReactAll from './template/react-all.ts.txt'
+
+function getContent(fp: string):string {
+    return fs.readFileSync(path.resolve(__dirname, fp), 'utf8')
+}
+
+const templateVueShimTsx = getContent('./template/vue-shim-tsx.d.ts.txt')
+const templateVueIndex = getContent('./template/vue-index.ts.txt')
+const templateVueAll = getContent('./template/vue-all.ts.txt')
+const templateVueNextIndex = getContent('./template/vue-next-index.ts.txt')
+const templateVueNextAll = getContent('./template/vue-next-all.ts.txt')
+const templateSvgIndex = getContent('./template/svg-index.ts.txt')
+const templateReactIndex = getContent('./template/react-index.ts.txt')
+const templateReactAll = getContent('./template/react-all.ts.txt')
 
 export interface IIconToolsOptions extends IRuntimeOptions {
     author: string

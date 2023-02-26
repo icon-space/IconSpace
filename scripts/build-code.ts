@@ -11,9 +11,6 @@ import iconsConfig from '../source/icons-config.json'
 
 const iconsJson = JSON.stringify(iconsConfig, null, 4)
 
-require.extensions['.txt'] = function (module, filename) {
-    module.exports = fs.readFileSync(filename, 'utf8')
-}
 
 export const BUILD_CONFIG: Omit<IIconToolsOptions, 'type'> = {
     author: 'IconSpace',

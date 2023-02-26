@@ -23,8 +23,8 @@ function toPascalCase(val: string): string {
     return val.replace(/(^\w|-\w)/g, c => c.slice(-1).toUpperCase());
 }
 
-const IconParkOptions: IIconAllOptions = {
-    name: 'icon-park',
+const IconSpaceOptions: IIconAllOptions = {
+    name: 'icon-space',
     props: ['size', 'strokeWidth', 'strokeLinecap', 'strokeLinejoin', 'theme', 'fill', 'spin', 'type'],
     setup: (props => {
 
@@ -57,7 +57,7 @@ const IconParkOptions: IIconAllOptions = {
     })
 };
 
-export const IconPark: AllIcon = IconParkOptions as AllIcon;
+export const IconSpace: AllIcon = IconSpaceOptions as AllIcon;
 
 export function install(Vue: App, prefix?: string): void {
     Object.values(IconMap).forEach(icon => {

@@ -27,6 +27,9 @@ jobs:
                   node-version: ${{ matrix.node-version }}
                   cache: 'pnpm'
 
+            - name: Clean
+              run: pnpm clean
+
             - name: Compiler
               run:  pnpm compiler
 

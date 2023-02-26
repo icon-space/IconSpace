@@ -13,8 +13,6 @@ import configVueNext from './packages/vue-next/tsconfig.json'
 import configSVG from './packages/svg/tsconfig.json'
 import configReact from './packages/react/tsconfig.json'
 
-type CB = () => void
-
 const TS_CONFIG_MAP = {
     react: configReact,
     vue: configVue,
