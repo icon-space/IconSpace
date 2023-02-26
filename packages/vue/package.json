@@ -3,7 +3,7 @@
     "version": "0.0.1-alpha.0",
     "description": "Vue Icons for IconSpace",
     "scripts": {
-        "pub": "pnpm publish"
+        "pub": "pnpm publish --no-git-checks"
     },
     "main": "lib/index.js",
     "module": "es/index.js",
