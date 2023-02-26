@@ -28,7 +28,7 @@ Find packages in `packages` folder. NPM packages make it painless to import icon
 
 The project will automatically generate the corresponding `react` `svg` `vue` `vue-next` code
 
-#### Publish
+### Publish
 
 1. Modify `packages/react/package.json` `packages/svg/package.json` `packages/vue/package.json` `packages/vue-next/package.json` versions
 2. submit

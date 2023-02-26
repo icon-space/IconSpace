@@ -28,7 +28,7 @@
 
 项目会自动生成对应的`react` `svg` `vue` `vue-next`代码
 
-#### 发布流程
+### 发布流程
 
 1. 修改 `packages/react/package.json` `packages/svg/package.json` `packages/vue/package.json` `packages/vue-next/package.json` 版本号
 2. 提交代码

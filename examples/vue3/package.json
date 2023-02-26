@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@icon-space/vue-next": "workspace:0.0.1-alpha.2",
+    "@icon-space/vue-next": "workspace:1.0.0-beta.0",
     "vue": "^3.2.45"
   },
   "devDependencies": {

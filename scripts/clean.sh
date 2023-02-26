@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 rm -rf source/db-fixed.csv
 rm -rf source/icons.json
