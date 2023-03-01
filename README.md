@@ -33,3 +33,7 @@ The project will automatically generate the corresponding `react` `svg` `vue` `v
 1. Modify `packages/react/package.json` `packages/svg/package.json` `packages/vue/package.json` `packages/vue-next/package.json` versions
 2. submit
 3. create a new `release`，`github action` will automatic publishing
+
+### Join
+
+![image](https://user-images.githubusercontent.com/9693637/222063392-d65150a7-fe33-4b62-b876-d367129c2fcf.png)

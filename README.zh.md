@@ -34,3 +34,6 @@
 2. 提交代码
 3. 在仓库创建`release`，`github action`会自动发布
 
+### 加入我们
+
+![image](https://user-images.githubusercontent.com/9693637/222063392-d65150a7-fe33-4b62-b876-d367129c2fcf.png)
