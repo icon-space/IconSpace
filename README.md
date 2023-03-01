@@ -36,4 +36,5 @@ The project will automatically generate the corresponding `react` `svg` `vue` `v
 
 ### Join
 
-![image](https://user-images.githubusercontent.com/9693637/222063392-d65150a7-fe33-4b62-b876-d367129c2fcf.png)
+![group](https://user-images.githubusercontent.com/41979509/222069693-3df322d9-d914-4d25-a7d3-6549f3a82127.jpeg)
+
