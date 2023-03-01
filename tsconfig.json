@@ -12,6 +12,7 @@
         "resolveJsonModule": true,
         "removeComments": true,
         "experimentalDecorators": true,
+        "skipLibCheck": true,
         "typeRoots": [
             "./node_modules/@types",
             "./typing"

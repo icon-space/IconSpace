@@ -33,7 +33,7 @@
         "@types/gulp-clean-css": "^4.3.0",
         "@types/gulp-less": "^0.0.32",
         "@types/merge2": "^1.4.0",
-        "@types/node": "^18.14.1",
+        "@types/node": "^18.14.2",
         "@vue/babel-plugin-jsx": "^1.1.1",
         "@vue/babel-preset-jsx": "^1.4.0",
         "commitizen": "^4.3.0",

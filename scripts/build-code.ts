@@ -44,9 +44,8 @@ export const BUILD_CONFIG: Omit<IIconToolsOptions, 'type'> = {
             fill: [
                 {
                     type: 'color',
-                    color: '#333',
+                    color: 'currentColor',
                     name: 'fill',
-                    currentColor: true
                 },
                 {
                     type: 'color',
@@ -62,9 +61,8 @@ export const BUILD_CONFIG: Omit<IIconToolsOptions, 'type'> = {
             fill: [
                 {
                     type: 'color',
-                    color: '#333',
+                    color: 'currentColor',
                     name: 'fill',
-                    currentColor: true
                 },
                 {
                     type: 'color',
@@ -80,9 +78,8 @@ export const BUILD_CONFIG: Omit<IIconToolsOptions, 'type'> = {
             fill: [
                 {
                     type: 'color',
-                    color: '#333',
+                    color: 'currentColor',
                     name: 'fill',
-                    currentColor: true
                 },
                 {
                     type: 'color',
@@ -97,9 +94,8 @@ export const BUILD_CONFIG: Omit<IIconToolsOptions, 'type'> = {
             fill: [
                 {
                     type: 'color',
-                    color: '#333',
+                    color: 'currentColor',
                     name: 'outStrokeColor',
-                    currentColor: true
                 },
                 {
                     type: 'color',

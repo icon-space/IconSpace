@@ -8,3 +8,6 @@
 <script setup lang="ts">
 import { Home, SettingOne } from '@icon-space/vue-next'
 </script>
+
+<style>
+</style>
