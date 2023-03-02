@@ -2658,3 +2658,9 @@ VR 眼镜,vr-glasses,硬件,Hardware,,image.png,否,VR 眼镜，眼镜，虚拟�
 放大,zoom-in,基础,Base,,image.png,是,搜索，查找，放大,齐奉飞
 缩放,zoom-internal,箭头方向,Arrows,,image.png,是,缩放，内缩放，大小,金磊
 缩小,zoom-out,基础,Base,,image.png,是,搜索，查找，缩小,齐奉飞
+已付款,paid,电商财产,Money,,image.png,否,已支付，已结账，支付成功，订单完成，complete,lhlyu
+待付款,pending-payment,电商财产,Money,,image.png,否,等待付款，待结账，pending,lhlyu
+付款失败,payment-failed,电商财产,Money,,image.png,否,取消，支付失败，canceled,lhlyu
+已退款,refunded,电商财产,Money,,image.png,否,退钱，退款,lhlyu
+悬浮窗,suspended-window,基础,Base,,image.png,否,悬浮框，悬浮，float,lhlyu
+直线,line,几何图形,Graphics,,image.png,否,线条，线段，线,lhlyu
