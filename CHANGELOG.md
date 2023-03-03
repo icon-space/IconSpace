@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.0.1
+## v1.0.1(next)
 
 > 2023.03.01
 
@@ -12,3 +12,11 @@
 - **add-icon**: Refunded - 已退款
 - **add-icon**: SuspendedWindow - 悬浮窗
 - **add-icon**: Line - 直线
+- **add-icon**: Openai
+- **add-icon**: Dingtalk - 钉钉
+
+## v1.0.0
+
+> 2023.02.26
+
+- **init**: fork iconpark
