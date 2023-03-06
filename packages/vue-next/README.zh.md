@@ -14,7 +14,7 @@
     * 四色
 
 ### 更多图标
-请访问[IconPark图标网站](http://iconpark.bytedance.com), 提供更多便捷的操作：
+请访问[IconSpace](https://icon-space.github.io/doc/), 提供更多便捷的操作：
 * 复制SVG源文件
 * 复制React图标组件
 * 复制Vue图标组件

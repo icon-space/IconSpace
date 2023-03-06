@@ -75,7 +75,7 @@ importers:
 
   examples/react:
     specifiers:
-      '@icon-space/react': workspace:1.0.1
+      '@icon-space/react': workspace:1.0.2-beta.0
       '@types/react': ^18.0.28
       '@types/react-dom': ^18.0.11
       '@vitejs/plugin-react': ^3.1.0
@@ -96,7 +96,7 @@ importers:
 
   examples/vue3:
     specifiers:
-      '@icon-space/vue-next': workspace:1.0.1
+      '@icon-space/vue-next': workspace:1.0.2-beta.0
       '@vitejs/plugin-vue': ^4.0.0
       typescript: ^4.9.5
       vite: ^4.1.4

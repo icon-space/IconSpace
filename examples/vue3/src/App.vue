@@ -1,14 +1,17 @@
 <template>
   <div>
       <Home :size="size"></Home>
-      <Paid :size="size"></Paid>
-      <Openai :size="size"></Openai>
-      <Dingtalk :size="size"></Dingtalk>
+      <Zhihu :size="size"></Zhihu>
+      <Bilibili :size="size"></Bilibili>
+      <Juejin :size="size"></Juejin>
+      <Discord :size="size"></Discord>
+      <ExpandAll :size="size"></ExpandAll>
+      <CollapseAll :size="size"></CollapseAll>
   </div>
 </template>
 
 <script setup lang="ts">
-import { Home, Paid, Openai, Dingtalk } from '@icon-space/vue-next'
+import { Home, Zhihu, Bilibili, Juejin, Discord, ExpandAll, CollapseAll } from '@icon-space/vue-next'
 
 const size = 50
 </script>

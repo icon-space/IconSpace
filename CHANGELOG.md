@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.0.2(next)
+
+> 2023.03.06
+
+- **fix**: 图标名称错误 [IconPark#539](https://github.com/bytedance/IconPark/issues/539)
+- **fix**: 行内公式和块公式搞反 [IconPark#552](https://github.com/bytedance/IconPark/issues/552)
+- **fix**: 智能摄像头和相机的图标文案反了 [IconPark#427](https://github.com/bytedance/IconPark/issues/427)
+- **fix**: 关于图标检索的建议 [IconPark#333](https://github.com/bytedance/IconPark/issues/333)
+- **add-icon**: Zhihu - 知乎
+- **add-icon**: Bilibili - B站
+- **add-icon**: Juejin - 掘金
+- **add-icon**: Discord
+- **add-icon**: ExpandAll - 全部展开
+- **add-icon**: CollapseAll - 全部折叠
+
 ## v1.0.1
 
 > 2023.03.01

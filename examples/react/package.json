@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@icon-space/react": "workspace:1.0.1",
+    "@icon-space/react": "workspace:1.0.2-beta.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
