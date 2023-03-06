@@ -8,6 +8,8 @@
 - **fix**: 行内公式和块公式搞反 [IconPark#552](https://github.com/bytedance/IconPark/issues/552)
 - **fix**: 智能摄像头和相机的图标文案反了 [IconPark#427](https://github.com/bytedance/IconPark/issues/427)
 - **fix**: 关于图标检索的建议 [IconPark#333](https://github.com/bytedance/IconPark/issues/333)
+- **fix**: 这两个图标的描述搞反了，瀑布流横向、瀑布流纵向 [IconPark#606](https://github.com/bytedance/IconPark/issues/606)
+- **fix**: db.csv 里面的“内部数据”，多了一个回车 [IconPark#584](https://github.com/bytedance/IconPark/issues/584)
 - **add-icon**: Zhihu - 知乎
 - **add-icon**: Bilibili - B站
 - **add-icon**: Juejin - 掘金

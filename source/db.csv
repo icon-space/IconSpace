@@ -1334,8 +1334,7 @@ instagram,instagram-one,品牌,Brand,,image.png,是,小视频，短视频，logo
 指令,instruction,办公文档,Office,,image.png,是,代码，编程，命令,田婧
 对讲机,intercom,硬件,Hardware,,image.png,是,联系，沟通，对话，连接，交流，电话，通讯,孟祥瑞
 半自动模式,intermediate-mode,编辑,Edit,,image.png,是,模式，亮度，对比度,李宁
-"内部数据
-",internal-data,抽象图形,Abstract,,image.png,是,内部数据，数据，数据展示，音调,张蔓
+内部数据,internal-data,抽象图形,Abstract,,image.png,是,内部数据，数据，数据展示，音调,张蔓
 内部扩大,internal-expansion,编辑,Edit,,image.png,是,内部缩小,金磊
 内部缩小,internal-reduction,编辑,Edit,,image.png,是,内部扩大,金磊
 内部传输,internal-transmission,抽象图形,Abstract,,image.png,是,内部传输，输送文件，接收文件,张蔓
@@ -2662,7 +2661,7 @@ VR 眼镜,vr-glasses,硬件,Hardware,,image.png,否,VR 眼镜，眼镜，虚拟�
 待付款,pending-payment,电商财产,Money,,image.png,否,等待付款，待结账，pending,lhlyu
 付款失败,payment-failed,电商财产,Money,,image.png,否,取消，支付失败，canceled,lhlyu
 已退款,refunded,电商财产,Money,,image.png,否,退钱，退款,lhlyu
-悬浮窗,suspended-window,基础,Base,,image.png,否,悬浮框，悬浮，float,lhlyu
+悬浮窗,suspended-window,基础,Base,,image.png,否,悬浮框，悬浮，画中画，float,lhlyu
 直线,line,几何图形,Graphics,,image.png,否,线条，线段，线,lhlyu
 openai,openai,品牌,Brand,,image.png,否,ai，chatgpt，chat，聊天,lhlyu
 钉钉,dingtalk,品牌,Brand,,image.png,否,chat，dingding，聊天，IM，即时通讯,lhlyu
