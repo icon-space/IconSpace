@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.0.2(next)
+## v1.0.2
 
 > 2023.03.06
 
@@ -16,6 +16,7 @@
 - **add-icon**: Discord
 - **add-icon**: ExpandAll - 全部展开
 - **add-icon**: CollapseAll - 全部折叠
+- **add-icon**: Gender - 性别
 
 ## v1.0.1
 
