@@ -1,8 +1,19 @@
 # Changelog
 
-## v1.0.2
+## v1.0.3(next)
 
-> 2023.03.06
+- **fix**: 部分图标 无法调整线段粗细 [IconPark#541](https://github.com/bytedance/IconPark/issues/541)
+- **add-icon**: Markdown 
+- **add-icon**: FileMarkdown
+- **add-icon**: Gif
+- **add-icon**: Ico
+- **add-icon**: Jpg
+- **add-icon**: Png
+- **add-icon**: Svg
+- **add-icon**: Mp3
+- **add-icon**: Mp4
+
+## v1.0.2
 
 - **fix**: 图标名称错误 [IconPark#539](https://github.com/bytedance/IconPark/issues/539)
 - **fix**: 行内公式和块公式搞反 [IconPark#552](https://github.com/bytedance/IconPark/issues/552)
@@ -20,8 +31,6 @@
 
 ## v1.0.1
 
-> 2023.03.01
-
 - **fix**: outStrokeColor has no effect on the icon [#4](https://github.com/icon-space/IconSpace/issues/4)
 
 - **add-icon**: Paid - 已付款
@@ -34,7 +43,5 @@
 - **add-icon**: Dingtalk - 钉钉
 
 ## v1.0.0
-
-> 2023.02.26
 
 - **init**: fork iconpark

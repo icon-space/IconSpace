@@ -1,5 +1,5 @@
-import fs from "fs";
-import path from "path";
+import fs from 'fs'
+import path from 'path'
 import { compiler } from './compiler'
 import { IndexGenerator } from './generator/IndexGenerator'
 import { LessGenerator } from './generator/LessGenerator'
@@ -30,8 +30,7 @@ import { JSXGenerator } from './generator/JSXGenerator'
 import { SvgGenerator } from './generator/SvgGenerator'
 import { FixMaskTypeTransformer } from './transformer/FixMaskTypeTransformer'
 
-
-function getContent(fp: string):string {
+function getContent(fp: string): string {
     return fs.readFileSync(path.resolve(__dirname, fp), 'utf8')
 }
 

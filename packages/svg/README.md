@@ -5,22 +5,26 @@
 ## Introduction
 
 ### Features
-* Provide more than 2000 icons
-* Provide 4 themes:
-    * outline
-    * filled
-    * two-tone
-    * multi-color
+
+-   Provide more than 2000 icons
+-   Provide 4 themes:
+    -   outline
+    -   filled
+    -   two-tone
+    -   multi-color
 
 ### More
+
 Please visit [IconSpace](https://icon-space.github.io/doc/)
-* Copy SVG
-* Copy React Icon component
-* Copy Vue Icon component
-* Download PNG
-* Download SVG
+
+-   Copy SVG
+-   Copy React Icon component
+-   Copy Vue Icon component
+-   Download PNG
+-   Download SVG
 
 ## Getting Started
+
 ### Install
 
 ```
@@ -28,7 +32,8 @@ npm install @icon-space/svg --save
 ```
 
 ### Include Component
-Import an icon from `@icon-space/svg`  and then call it:
+
+Import an icon from `@icon-space/svg` and then call it:
 
 ```
 import {Home} from '@icon-space/svg';
@@ -41,10 +46,11 @@ console.log(svg);
 ```
 
 ### Global Config
+
 You can use the static methods `setConfig` in `@icon-space/svg` to set the default config globally:
 
 ```typescript
-import {setConfig} from '@icon-space/svg'
+import { setConfig } from '@icon-space/svg'
 
 setConfig({
     theme: 'outline',
@@ -64,6 +70,7 @@ setConfig({
 You can use [babel-plugin-import](https://github.com/ant-design/babel-plugin-import) to import icons on demand.
 
 Set config like this:
+
 ```json
 {
     "plugins": [
@@ -71,23 +78,26 @@ Set config like this:
             "import",
             {
                 "libraryName": "@icon-space/svg",
-                 "libraryDirectory": "es/icons",
-                 "camel2DashComponentName": false 
+                "libraryDirectory": "es/icons",
+                "camel2DashComponentName": false
             }
         ]
     ]
 }
 ```
+
 ### Embed IconSpace in your project
+
 If you need to use additional information such as icon name, author, category, label and creation time, you can use the `icons.json` file located in the root directory of each NPM.
 
 ## Props
-|    prop	 | description  | type  | default | note |
-| ---------- | --- | --- | --- | --- |
-| theme |  Theme of the icons.  | 'outline' &#124; 'filled' &#124; 'two-tone' &#124; 'multi-color' | 'outline'  |
-| size |  The width/height of the icon | number &#124; string |  '1em' |
-| spin |  Rotate icon with animation | boolean | false |
-| fill |  Colors of theme | string  &#124; string[] |  'currentColor' |
-| strokeLinecap |  the stroke-linecap prop of svg element | 'butt' &#124; 'round' &#124; 'square' |  'round' |
-| strokeLinejoin |  the stroke-linejoin prop of svg element | 'miter' &#124; 'round' &#124; 'bevel' |  'round' |
-| strokeWidth |  the stroke-width prop of svg element | number |  4 |
+
+| prop           | description                             | type                                                             | default        | note |
+| -------------- | --------------------------------------- | ---------------------------------------------------------------- | -------------- | ---- |
+| theme          | Theme of the icons.                     | 'outline' &#124; 'filled' &#124; 'two-tone' &#124; 'multi-color' | 'outline'      |
+| size           | The width/height of the icon            | number &#124; string                                             | '1em'          |
+| spin           | Rotate icon with animation              | boolean                                                          | false          |
+| fill           | Colors of theme                         | string &#124; string[]                                           | 'currentColor' |
+| strokeLinecap  | the stroke-linecap prop of svg element  | 'butt' &#124; 'round' &#124; 'square'                            | 'round'        |
+| strokeLinejoin | the stroke-linejoin prop of svg element | 'miter' &#124; 'round' &#124; 'bevel'                            | 'round'        |
+| strokeWidth    | the stroke-width prop of svg element    | number                                                           | 4              |

@@ -2672,3 +2672,12 @@ Discord,discord,品牌,Brand,,image.png,否,社群，即时通话，聊天，玩
 全部展开,expand-all,箭头方向,Arrows,,image.png,否,打开，张开，展示,lhlyu
 全部折叠,collapse-all,箭头方向,Arrows,,image.png,否,收缩，关闭，收起，隐藏,lhlyu
 性别,gender,基础,Base,,image.png,否,性别，sex，男女，man，women,lhlyu
+文件-markdown,file-markdown,办公文档,Office,,image.png,否,文件，markdown,lhlyu
+markdown,markdown,办公文档,Office,,image.png,否,文件，markdown,lhlyu
+gif,gif,办公文档,Office,,image.png,否,文件，格式，扩展名，后缀，图片，媒体，动图,lhlyu
+ico,ico,办公文档,Office,,image.png,否,文件，格式，扩展名，后缀，图片，媒体，图标，favicon,lhlyu
+jpg,jpg,办公文档,Office,,image.png,否,文件，格式，扩展名，后缀，图片，媒体，jpeg,lhlyu
+png,png,办公文档,Office,,image.png,否,文件，格式，扩展名，后缀，图片，媒体，透明,lhlyu
+svg,svg,办公文档,Office,,image.png,否,文件，格式，扩展名，后缀，图片，媒体，矢量图,lhlyu
+mp3,mp3,办公文档,Office,,image.png,否,文件，格式，扩展名，后缀，媒体，音乐,lhlyu
+mp4,mp4,办公文档,Office,,image.png,否,文件，格式，扩展名，后缀，媒体，视频,lhlyu

@@ -11,7 +11,6 @@ import iconsConfig from '../source/icons-config.json'
 
 const iconsJson = JSON.stringify(iconsConfig, null, 4)
 
-
 export const BUILD_CONFIG: Omit<IIconToolsOptions, 'type'> = {
     author: 'IconSpace',
     useType: true,
@@ -45,7 +44,7 @@ export const BUILD_CONFIG: Omit<IIconToolsOptions, 'type'> = {
                 {
                     type: 'color',
                     color: 'currentColor',
-                    name: 'fill',
+                    name: 'fill'
                 },
                 {
                     type: 'color',
@@ -62,7 +61,7 @@ export const BUILD_CONFIG: Omit<IIconToolsOptions, 'type'> = {
                 {
                     type: 'color',
                     color: 'currentColor',
-                    name: 'fill',
+                    name: 'fill'
                 },
                 {
                     type: 'color',
@@ -79,7 +78,7 @@ export const BUILD_CONFIG: Omit<IIconToolsOptions, 'type'> = {
                 {
                     type: 'color',
                     color: 'currentColor',
-                    name: 'fill',
+                    name: 'fill'
                 },
                 {
                     type: 'color',
@@ -95,7 +94,7 @@ export const BUILD_CONFIG: Omit<IIconToolsOptions, 'type'> = {
                 {
                     type: 'color',
                     color: 'currentColor',
-                    name: 'outStrokeColor',
+                    name: 'outStrokeColor'
                 },
                 {
                     type: 'color',

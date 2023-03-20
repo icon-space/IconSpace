@@ -115,13 +115,11 @@ function createBuildTask(name: 'react' | 'vue' | 'svg' | 'vue-next'): string {
     const cwd = path.resolve(process.cwd(), 'packages/', name)
 
     gulp.task('build-script-' + name, () => {
-
         const result = gulp
             .src(['src/*.ts', 'src/*.tsx', 'src/**/*.ts', 'src/**/*.tsx'], {
                 cwd
             })
             .pipe(ts(TS_CONFIG_MAP[name].compilerOptions))
-
 
         const jsResultStream = result.js
         const dtsResultStream = result.dts
@@ -162,12 +160,4 @@ function createBuildTask(name: 'react' | 'vue' | 'svg' | 'vue-next'): string {
     return 'build-' + name
 }
 
-gulp.task(
-    'default',
-    gulp.parallel(
-        createBuildTask('react'),
-        createBuildTask('vue'),
-        createBuildTask('svg'),
-        createBuildTask('vue-next'),
-    )
-)
+gulp.task('default', gulp.parallel(createBuildTask('react'), createBuildTask('vue'), createBuildTask('svg'), createBuildTask('vue-next')))

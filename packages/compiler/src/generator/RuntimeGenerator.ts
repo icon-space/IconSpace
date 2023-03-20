@@ -568,7 +568,11 @@ export abstract class RuntimeGenerator extends Generator {
                             if (fill.currentColor) {
                                 this.write("'currentColor'")
                             } else {
-                                this.write(`config.colors.${camelCase(theme.name)}.${camelCase(fill.name)}.trim().length ? config.colors.${camelCase(theme.name)}.${camelCase(fill.name)} : 'currentColor'`)
+                                this.write(
+                                    `config.colors.${camelCase(theme.name)}.${camelCase(fill.name)}.trim().length ? config.colors.${camelCase(theme.name)}.${camelCase(
+                                        fill.name
+                                    )} : 'currentColor'`
+                                )
                             }
                         }
 

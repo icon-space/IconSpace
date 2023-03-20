@@ -1,0 +1,13 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <path d="M10,38v6h28v-6" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <path d="M38,20v-6L30,4H10V20" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <path d="M28,4V14h10" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <path d="M10,25v8" stroke="black" stroke-linecap="round" stroke-width="4"/>
+    <path d="M10,25h3.5c1.4,0,2.5,1.1,2.5,2.5h0c0,1.4-1.1,2.5-2.5,2.5h-3.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <path d="M16,12h4" stroke="black" stroke-linecap="round" stroke-width="4"/>
+    <rect x="4" y="20" width="40" height="18" rx="2" ry="2" stroke="black" stroke-linejoin="round" stroke-width="4"/>
+  </g>
+  <polyline points="21 33 21 25 27 33 27 25" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  <polyline points="38 25 32 25 32 33 38 33 38 29.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+</svg>
