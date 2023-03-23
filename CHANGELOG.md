@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.0.3(next)
+## v1.0.3
 
 - **fix**: 部分图标 无法调整线段粗细 [IconPark#541](https://github.com/bytedance/IconPark/issues/541)
 - **add-icon**: Markdown 
