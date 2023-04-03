@@ -19,24 +19,24 @@ source/db-fixed.csv
 source/icons-config.json
 source/icons.json
 
-packages/svg/src
+packages/svg/src/icons
 packages/svg/es
 packages/svg/lib
 packages/svg/icons.json
 
-packages/react/src
+packages/react/src/icons
 packages/react/es
 packages/react/lib
 packages/react/styles
 packages/react/icons.json
 
-packages/vue/src
+packages/vue/src/icons
 packages/vue/es
 packages/vue/lib
 packages/vue/styles
 packages/vue/icons.json
 
-packages/vue-next/src
+packages/vue-next/src/icons
 packages/vue-next/es
 packages/vue-next/lib
 packages/vue-next/styles
