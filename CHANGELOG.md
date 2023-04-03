@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.0.4(next)
+## v1.0.4
 
 - **feat**: 如何修改，生成的默认span标签，我想i标签作为标签，改如何做呢 [IconPark#389](https://github.com/bytedance/IconPark/issues/389)
 - **feat**: vue 组件 如果找不到图标，回退，或者啥也不显示 [IconPark#418](https://github.com/bytedance/IconPark/issues/418)
