@@ -6,6 +6,27 @@
 import Vue, { ComponentOptions, CreateElement, VNode, VueConstructor } from 'vue'
 import { ArrayPropsDefinition, DefaultComputed, DefaultData, DefaultMethods } from 'vue/types/options'
 
+type NonAny = number | boolean | string | symbol | null
+type DeepPartial<T> = {
+    [P in keyof T]?: T[P] extends NonAny[] // checks for nested any[]
+        ? T[P]
+        : T[P] extends ReadonlyArray<NonAny> // checks for nested ReadonlyArray<any>
+        ? T[P]
+        : T[P] extends Date // checks for Date
+        ? T[P]
+        : T[P] extends (infer U)[]
+        ? DeepPartial<U>[]
+        : T[P] extends ReadonlyArray<infer U>
+        ? ReadonlyArray<DeepPartial<U>>
+        : T[P] extends Set<infer V> // checks for Sets
+        ? Set<DeepPartial<V>>
+        : T[P] extends Map<infer K, infer V> // checks for Maps
+        ? Map<K, DeepPartial<V>>
+        : T[P] extends NonAny // checks for primative values
+        ? T[P]
+        : DeepPartial<T[P]> // recurse for all non-array, non-date and non-primative values
+}
+
 // 描边连接类型
 export type StrokeLinejoin = 'miter' | 'round' | 'bevel'
 
@@ -17,6 +38,9 @@ export type Theme = 'outline' | 'filled' | 'two-tone' | 'multi-color'
 
 // 包裹前的图标属性
 export interface ISvgIconProps {
+    // 包裹当前的图标的tag，默认是span
+    tag: string
+
     // 当前图标的唯一Id
     id: string
 
@@ -38,6 +62,9 @@ export interface ISvgIconProps {
 
 // 图标配置属性
 export interface IIconConfig {
+    // 图标包裹tag，默认span
+    tag: string
+
     // 图标尺寸大小，默认1em
     size: number | string
 
@@ -87,6 +114,9 @@ export interface IIconConfig {
 
 // 图标基础属性
 export interface IIconBase {
+    // 自定义tag，默认是span包裹
+    tag?: string
+
     // 图标尺寸大小，默认1em
     size?: number | string
 
@@ -117,7 +147,7 @@ export type IconHelper = CreateElement
 // 包裹前的图标实例
 export interface IIconInstance extends Vue, IIconProps {
     id: string
-    ICON_CONFIGS?: IIconConfig
+    ICON_CONFIGS?: DeepPartial<IIconConfig>
 }
 
 // 包裹后的图标属性
@@ -132,6 +162,7 @@ export type Icon = VueConstructor<IIconInstance>
 
 // 默认属性
 export const DEFAULT_ICON_CONFIGS: IIconConfig = {
+    tag: 'span',
     size: '1em',
     strokeWidth: 4,
     strokeLinecap: 'round',
@@ -165,47 +196,56 @@ function guid(): string {
     return 'icon-' + (((1 + Math.random()) * 0x100000000) | 0).toString(16).substring(1)
 }
 
+const getColor = (fillColor: string | undefined, cfgColor: string): string => {
+    if (fillColor?.trim()?.length) {
+        return fillColor
+    }
+    if (cfgColor.trim().length) {
+        return cfgColor
+    }
+    return 'currentColor'
+}
+
 // 属性转换函数
-export function IconConverter(id: string, icon: IIconBase, config: IIconConfig): ISvgIconProps {
-    const fill = typeof icon.fill === 'string' ? [icon.fill] : icon.fill || []
+export function IconConverter(id: string, icon: IIconBase, config: DeepPartial<IIconConfig>): ISvgIconProps {
+    const fill: string[] = typeof icon.fill === 'string' ? [icon.fill] : icon.fill || []
     const colors: string[] = []
 
-    const theme: Theme = icon.theme || config.theme
+    const theme: Theme = icon.theme || config.theme || DEFAULT_ICON_CONFIGS.theme
 
     switch (theme) {
         case 'outline':
-            colors.push(typeof fill[0] === 'string' ? fill[0] : config.colors.outline.fill.trim().length ? config.colors.outline.fill : 'currentColor')
+            colors.push(getColor(fill[0], config?.colors?.outline?.fill ?? DEFAULT_ICON_CONFIGS.colors.outline.fill))
             colors.push('transparent')
-            colors.push(typeof fill[0] === 'string' ? fill[0] : config.colors.outline.fill.trim().length ? config.colors.outline.fill : 'currentColor')
+            colors.push(getColor(fill[0], config?.colors?.outline?.fill ?? DEFAULT_ICON_CONFIGS.colors.outline.fill))
             colors.push('transparent')
             break
         case 'filled':
-            colors.push(typeof fill[0] === 'string' ? fill[0] : config.colors.filled.fill.trim().length ? config.colors.filled.fill : 'currentColor')
-            colors.push(typeof fill[0] === 'string' ? fill[0] : config.colors.filled.fill.trim().length ? config.colors.filled.fill : 'currentColor')
+            colors.push(getColor(fill[0], config?.colors?.filled?.fill ?? DEFAULT_ICON_CONFIGS.colors.filled.fill))
+            colors.push(getColor(fill[0], config?.colors?.filled?.fill ?? DEFAULT_ICON_CONFIGS.colors.filled.fill))
             colors.push('#FFF')
             colors.push('#FFF')
             break
         case 'two-tone':
-            colors.push(typeof fill[0] === 'string' ? fill[0] : config.colors.twoTone.fill.trim().length ? config.colors.twoTone.fill : 'currentColor')
-            colors.push(typeof fill[1] === 'string' ? fill[1] : config.colors.twoTone.twoTone.trim().length ? config.colors.twoTone.twoTone : 'currentColor')
-            colors.push(typeof fill[0] === 'string' ? fill[0] : config.colors.twoTone.fill.trim().length ? config.colors.twoTone.fill : 'currentColor')
-            colors.push(typeof fill[1] === 'string' ? fill[1] : config.colors.twoTone.twoTone.trim().length ? config.colors.twoTone.twoTone : 'currentColor')
+            colors.push(getColor(fill[0], config?.colors?.twoTone?.fill ?? DEFAULT_ICON_CONFIGS.colors.twoTone.fill))
+            colors.push(getColor(fill[1], config?.colors?.twoTone?.twoTone ?? DEFAULT_ICON_CONFIGS.colors.twoTone.twoTone))
+            colors.push(getColor(fill[0], config?.colors?.twoTone?.fill ?? DEFAULT_ICON_CONFIGS.colors.twoTone.fill))
+            colors.push(getColor(fill[1], config?.colors?.twoTone?.twoTone ?? DEFAULT_ICON_CONFIGS.colors.twoTone.twoTone))
             break
         case 'multi-color':
-            colors.push(typeof fill[0] === 'string' ? fill[0] : config.colors.multiColor.outStrokeColor.trim().length ? config.colors.multiColor.outStrokeColor : 'currentColor')
-            colors.push(typeof fill[1] === 'string' ? fill[1] : config.colors.multiColor.outFillColor.trim().length ? config.colors.multiColor.outFillColor : 'currentColor')
-            colors.push(
-                typeof fill[2] === 'string' ? fill[2] : config.colors.multiColor.innerStrokeColor.trim().length ? config.colors.multiColor.innerStrokeColor : 'currentColor'
-            )
-            colors.push(typeof fill[3] === 'string' ? fill[3] : config.colors.multiColor.innerFillColor.trim().length ? config.colors.multiColor.innerFillColor : 'currentColor')
+            colors.push(getColor(fill[0], config?.colors?.multiColor?.outStrokeColor ?? DEFAULT_ICON_CONFIGS.colors.multiColor.outStrokeColor))
+            colors.push(getColor(fill[1], config?.colors?.multiColor?.outFillColor ?? DEFAULT_ICON_CONFIGS.colors.multiColor.outFillColor))
+            colors.push(getColor(fill[2], config?.colors?.multiColor?.innerStrokeColor ?? DEFAULT_ICON_CONFIGS.colors.multiColor.innerStrokeColor))
+            colors.push(getColor(fill[3], config?.colors?.multiColor?.innerFillColor ?? DEFAULT_ICON_CONFIGS.colors.multiColor.innerFillColor))
             break
     }
 
     return {
-        size: icon.size || config.size,
-        strokeWidth: icon.strokeWidth || config.strokeWidth,
-        strokeLinecap: icon.strokeLinecap || config.strokeLinecap,
-        strokeLinejoin: icon.strokeLinejoin || config.strokeLinejoin,
+        tag: icon.tag || config.tag || DEFAULT_ICON_CONFIGS.tag,
+        size: icon.size || config.size || DEFAULT_ICON_CONFIGS.size,
+        strokeWidth: icon.strokeWidth || config.strokeWidth || DEFAULT_ICON_CONFIGS.strokeWidth,
+        strokeLinecap: icon.strokeLinecap || config.strokeLinecap || DEFAULT_ICON_CONFIGS.strokeLinecap,
+        strokeLinejoin: icon.strokeLinejoin || config.strokeLinejoin || DEFAULT_ICON_CONFIGS.strokeLinejoin,
         colors,
         id
     }
@@ -216,17 +256,18 @@ export function IconWrapper(name: string, rtl: boolean, render: IconRender): Ico
     const options: IconOptions = {
         name: 'icon-' + name,
         inject: ['ICON_CONFIGS'],
-        props: ['size', 'strokeWidth', 'strokeLinecap', 'strokeLinejoin', 'theme', 'fill', 'spin'],
+        props: ['tag', 'size', 'strokeWidth', 'strokeLinecap', 'strokeLinejoin', 'theme', 'fill', 'spin'],
         data() {
             return { id: guid() }
         },
         inheritAttrs: false,
-        render(this: IIconInstance, h: CreateElement): VNode {
-            const { size, strokeWidth, strokeLinecap, strokeLinejoin, theme, fill, id, spin, ICON_CONFIGS = DEFAULT_ICON_CONFIGS } = this
+        render: function (this: IIconInstance, h: CreateElement): VNode {
+            const { tag, size, strokeWidth, strokeLinecap, strokeLinejoin, theme, fill, id, spin, ICON_CONFIGS = DEFAULT_ICON_CONFIGS } = this
 
             const svgProps = IconConverter(
                 id,
                 {
+                    tag,
                     size,
                     strokeWidth,
                     strokeLinecap,
@@ -249,7 +290,17 @@ export function IconWrapper(name: string, rtl: boolean, render: IconRender): Ico
                 cls.push('i-icon-spin')
             }
 
-            return <span className={cls.join(' ')}>{render(h, svgProps)}</span>
+            const tagWrapper = svgProps.tag
+
+            if (tagWrapper.length === 0) {
+                return (
+                    <>
+                        {render(h, svgProps)}
+                    </>
+                )
+            }
+
+            return <tagWrapper className={cls.join(' ')}>{render(h, svgProps)}</tagWrapper>
         }
     }
 

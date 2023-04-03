@@ -13,12 +13,8 @@
         "preserveSymlinks": true,
         "resolveJsonModule": true,
         "removeComments": true,
-        "importHelpers": true,
         "experimentalDecorators": true,
         "skipLibCheck": true,
-        "useDefineForClassFields": true,
-        "isolatedModules": true,
-        "composite": true,
         "baseUrl": "./"
     },
     "exclude": []

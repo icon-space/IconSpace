@@ -77,6 +77,7 @@ export class JSXGenerator extends IconGenerator {
         const { useDefault, useType, style, useHelper, helperName, propName, stylePropName, wrapperNeedName, wrapperNeedRTL, rtl, importPath, extraImport } = this
 
         this.processHeaderComment()
+        this.writeLine('// @ts-nocheck')
         this.writeLine('/* tslint:disable: max-line-length */')
         this.writeLine('/* eslint-disable max-len */')
 

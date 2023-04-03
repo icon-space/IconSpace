@@ -42,7 +42,6 @@
 ## v1.0.1
 
 - **fix**: outStrokeColor has no effect on the icon [#4](https://github.com/icon-space/IconSpace/issues/4)
-
 - **add-icon**: Paid - 已付款
 - **add-icon**: PendingPayment - 待付款
 - **add-icon**: PaymentFailed - 付款失败

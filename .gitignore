@@ -20,23 +20,27 @@ source/icons-config.json
 source/icons.json
 
 packages/svg/src/icons
+packages/svg/src/map.ts
 packages/svg/es
 packages/svg/lib
 packages/svg/icons.json
 
 packages/react/src/icons
+packages/react/src/map.ts
 packages/react/es
 packages/react/lib
 packages/react/styles
 packages/react/icons.json
 
 packages/vue/src/icons
+packages/vue/src/map.ts
 packages/vue/es
 packages/vue/lib
 packages/vue/styles
 packages/vue/icons.json
 
 packages/vue-next/src/icons
+packages/vue-next/src/map.ts
 packages/vue-next/es
 packages/vue-next/lib
 packages/vue-next/styles

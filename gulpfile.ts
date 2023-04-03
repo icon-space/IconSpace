@@ -4,6 +4,7 @@ import gulp from 'gulp'
 import path from 'path'
 import merge from 'merge2'
 import babel from 'gulp-babel'
+import debug from 'gulp-debug'
 import ts from 'gulp-typescript'
 import cleanCss from 'gulp-clean-css'
 import less from 'gulp-less'
@@ -54,6 +55,7 @@ const BABEL_CONFIG_MAP = {
                     }
                 }
             ],
+            '@babel/preset-react',
             '@vue/babel-preset-jsx'
         ],
         plugins: [
@@ -160,4 +162,12 @@ function createBuildTask(name: 'react' | 'vue' | 'svg' | 'vue-next'): string {
     return 'build-' + name
 }
 
-gulp.task('default', gulp.parallel(createBuildTask('react'), createBuildTask('vue'), createBuildTask('svg'), createBuildTask('vue-next')))
+gulp.task(
+    'default',
+    gulp.parallel(
+        createBuildTask('react'),
+        createBuildTask('vue'),
+        createBuildTask('svg'),
+        createBuildTask('vue-next'),
+    )
+)

@@ -158,3 +158,4 @@ export default {
 | strokeLinecap  | svg 元素的 stroke-linecap 属性              | 'butt' &#124; 'round' &#124; 'square'                            | 'round'        |
 | strokeLinejoin | svg 元素的 stroke-linejoin 属性             | 'miter' &#124; 'round' &#124; 'bevel'                            | 'round'        |
 | strokeWidth    | svg 元素的 stroke-width 属性                | number                                                           | 4              |
+| tag            | 包裹 svg 的标签                             | string                                                           | span           |      |

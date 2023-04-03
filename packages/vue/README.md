@@ -158,3 +158,4 @@ If you need to use additional information such as icon name, author, category, l
 | strokeLinecap  | the stroke-linecap prop of svg element  | 'butt' &#124; 'round' &#124; 'square'                            | 'round'        |      |
 | strokeLinejoin | the stroke-linejoin prop of svg element | 'miter' &#124; 'round' &#124; 'bevel'                            | 'round'        |      |
 | strokeWidth    | the stroke-width prop of svg element    | number                                                           | 4              |      |
+| tag            | wrapper tag of svg element              | string                                                           | span           |      |

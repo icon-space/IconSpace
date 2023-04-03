@@ -24,26 +24,18 @@ function toPascalCase(val: string): string {
 
 const options: ComponentOptions<IIconSpaceInstance> = {
     name: 'icon-space',
-    props: ['type', 'theme', 'size', 'spin', 'fill', 'strokeLinecap', 'strokeLinejoin', 'strokeWidth'],
+    props: ['tag', 'type', 'theme', 'size', 'spin', 'fill', 'strokeLinecap', 'strokeLinejoin', 'strokeWidth'],
     inheritAttrs: true,
     render(this: IIconSpaceInstance, h): VNode {
         const type = toPascalCase(this.type)
-        const { theme, size, fill, strokeLinecap, strokeLinejoin, strokeWidth, spin } = this
 
         if (!(type in IconMap)) {
-            throw new Error(`${type} is not a valid icon type name`)
+            console.error(`${type} is not a valid icon type name`)
+            return h('', {})
         }
 
         return h(IconMap[type as IconType], {
-            props: {
-                theme,
-                size,
-                fill,
-                strokeLinecap,
-                strokeLinejoin,
-                strokeWidth,
-                spin
-            }
+            props: this.$props
         })
     }
 }
