@@ -30,19 +30,6 @@ import { JSXGenerator } from './generator/JSXGenerator'
 import { SvgGenerator } from './generator/SvgGenerator'
 import { FixMaskTypeTransformer } from './transformer/FixMaskTypeTransformer'
 
-function getContent(fp: string): string {
-    return fs.readFileSync(path.resolve(__dirname, fp), 'utf8')
-}
-
-const templateVueShimTsx = getContent('./template/vue-shim-tsx.d.ts.txt')
-const templateVueIndex = getContent('./template/vue-index.ts.txt')
-const templateVueAll = getContent('./template/vue-all.ts.txt')
-const templateVueNextIndex = getContent('./template/vue-next-index.ts.txt')
-const templateVueNextAll = getContent('./template/vue-next-all.ts.txt')
-const templateSvgIndex = getContent('./template/svg-index.ts.txt')
-const templateReactIndex = getContent('./template/react-index.ts.txt')
-const templateReactAll = getContent('./template/react-all.ts.txt')
-
 export interface IIconToolsOptions extends IRuntimeOptions {
     author: string
     type: 'react' | 'vue' | 'svg' | 'vue-next'
@@ -111,21 +98,7 @@ export class IconCompiler {
     public getIconFiles(): IIconFile[] {
         const list = Object.keys(this.map).map(key => this.getIconFile(key))
 
-        list.push(this.getRuntimeFile(), this.getMapFile(), this.getIndexFile())
-
-        if (this.options.type !== 'svg') {
-            list.push(this.getLessFile())
-        }
-
-        const allFile = this.getAllFile()
-        if (allFile) {
-            list.push(allFile)
-        }
-
-        const shimFile = this.getShimTsxFile()
-        if (shimFile) {
-            list.push(shimFile)
-        }
+        list.push(this.getMapFile())
 
         return list
     }
@@ -186,56 +159,6 @@ export class IconCompiler {
         })
 
         return generator.process()
-    }
-
-    // 获取index文件
-    public getIndexFile(): IIconFile {
-        let content: string = ''
-        if (this.options.type === 'vue') {
-            content = templateVueIndex
-        } else if (this.options.type === 'vue-next') {
-            content = templateVueNextIndex
-        } else if (this.options.type === 'react') {
-            content = templateReactIndex
-        } else if (this.options.type === 'svg') {
-            content = templateSvgIndex
-        }
-        return {
-            mime: 'text/javascript',
-            path: 'index.' + (this.options.useType ? 'ts' : 'js'),
-            content: content
-        }
-    }
-
-    // 获取all文件
-    public getAllFile(): IIconFile | null {
-        let content: string = ''
-        if (this.options.type === 'vue') {
-            content = templateVueAll
-        } else if (this.options.type === 'vue-next') {
-            content = templateVueNextAll
-        } else if (this.options.type === 'react') {
-            content = templateReactAll
-        } else if (this.options.type === 'svg') {
-            return null
-        }
-        return {
-            mime: 'text/javascript',
-            path: 'all.' + (this.options.useType ? 'ts' : 'js'),
-            content: content
-        }
-    }
-
-    // 获取shim-tsx文件
-    public getShimTsxFile(): IIconFile | null {
-        if (this.options.type !== 'vue') {
-            return null
-        }
-        return {
-            mime: 'text/javascript',
-            path: 'shim-tsx.d.' + (this.options.useType ? 'ts' : 'js'),
-            content: templateVueShimTsx
-        }
     }
 
     private createCompiler(): IconCompilerFunc {

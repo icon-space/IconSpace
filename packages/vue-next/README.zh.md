@@ -150,10 +150,11 @@ export default {
 
 | 属性名称       | 介绍                                        | 类型                                                             | 默认值         | 注释 |
 | -------------- | ------------------------------------------- | ---------------------------------------------------------------- | -------------- | ---- |
-| theme          | 图标主题                                    | 'outline' &#124; 'filled' &#124; 'two-tone' &#124; 'multi-color' | 'outline'      |
-| size           | 图标的大小，宽高相同                        | number &#124; string                                             | '1em'          |
-| spin           | 给图标加旋转效果                            | boolean                                                          | false          |
-| fill           | 图标的颜色，不超过 4 个颜色，默认为当前颜色 | string &#124; string[]                                           | 'currentColor' |
-| strokeLinecap  | svg 元素的 stroke-linecap 属性              | 'butt' &#124; 'round' &#124; 'square'                            | 'round'        |
-| strokeLinejoin | svg 元素的 stroke-linejoin 属性             | 'miter' &#124; 'round' &#124; 'bevel'                            | 'round'        |
-| strokeWidth    | svg 元素的 stroke-width 属性                | number                                                           | 4              |
+| theme          | 图标主题                                    | 'outline' &#124; 'filled' &#124; 'two-tone' &#124; 'multi-color' | 'outline'      |      |
+| size           | 图标的大小，宽高相同                        | number &#124; string                                             | '1em'          |      |
+| spin           | 给图标加旋转效果                            | boolean                                                          | false          |      |
+| fill           | 图标的颜色，不超过 4 个颜色，默认为当前颜色 | string &#124; string[]                                           | 'currentColor' |      |
+| strokeLinecap  | svg 元素的 stroke-linecap 属性              | 'butt' &#124; 'round' &#124; 'square'                            | 'round'        |      |
+| strokeLinejoin | svg 元素的 stroke-linejoin 属性             | 'miter' &#124; 'round' &#124; 'bevel'                            | 'round'        |      |
+| strokeWidth    | svg 元素的 stroke-width 属性                | number                                                           | 4              |      |
+| tag            | 包裹 svg 的标签                             | string                                                           | span           |      |

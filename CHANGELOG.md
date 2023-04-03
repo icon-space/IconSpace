@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.0.4(next)
+
+- **feat**: 如何修改，生成的默认span标签，我想i标签作为标签，改如何做呢 [IconPark#389](https://github.com/bytedance/IconPark/issues/389)
+- **feat**: vue 组件 如果找不到图标，回退，或者啥也不显示 [IconPark#418](https://github.com/bytedance/IconPark/issues/418)
+- **feat**: setConfig "IIconConfig" type should be partial [IconPark#348](https://github.com/bytedance/IconPark/issues/348)
+- **fix**: vue3 icon-park/vue-next/es/all 引入 IconPark 组件，该组件不会动态更新传入参数给子组件 [IconPark#451](https://github.com/bytedance/IconPark/issues/451)
+- **add-icon**: Programmer | 程序员
+- **add-icon**: CheckTwo | 校验
+- **add-icon**: CloseTwo | 关闭
+
 ## v1.0.3
 
 - **fix**: 部分图标 无法调整线段粗细 [IconPark#541](https://github.com/bytedance/IconPark/issues/541)

@@ -1,6 +1,6 @@
 {
     "name": "@icon-space/vue",
-    "version": "1.0.3",
+    "version": "1.0.4-beta.0",
     "description": "Vue Icons for IconSpace",
     "main": "lib/index.js",
     "module": "es/index.js",
@@ -43,7 +43,8 @@
     },
     "dependencies": {
         "@vue/babel-helper-vue-jsx-merge-props": "^1.4.0",
-        "csstype": "^3.1.1"
+        "csstype": "^3.1.1",
+        "vue": "~2.7.14"
     },
     "publishConfig": {
         "access": "public",

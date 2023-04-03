@@ -4,8 +4,27 @@ export class VueNextRuntimeGenerator extends RuntimeGenerator {
     protected processPlatformImports(): void {
         if (this.useType) {
             this.writeLine("import {ComponentOptions, DefineComponent, inject, provide} from '@vue/runtime-dom';")
-        } else {
-            this.writeLine("import React, {createContext, useContext, useMemo} from 'react';")
+            this.writeLine()
+            this.writeLine('type NonAny = number | boolean | string | symbol | null;')
+            this.writeLine(`type DeepPartial<T> = {
+    [P in keyof T]?: T[P] extends NonAny[] // checks for nested any[]
+        ? T[P]
+        : T[P] extends ReadonlyArray<NonAny> // checks for nested ReadonlyArray<any>
+            ? T[P]
+            : T[P] extends Date // checks for Date
+                ? T[P]
+                : T[P] extends (infer U)[]
+                    ? DeepPartial<U>[]
+                    : T[P] extends ReadonlyArray<infer U>
+                        ? ReadonlyArray<DeepPartial<U>>
+                        : T[P] extends Set<infer V> // checks for Sets
+                            ? Set<DeepPartial<V>>
+                            : T[P] extends Map<infer K, infer V> // checks for Maps
+                                ? Map<K, DeepPartial<V>>
+                                : T[P] extends NonAny // checks for primative values
+                                    ? T[P]
+                                    : DeepPartial<T[P]>; // recurse for all non-array, non-date and non-primative values
+};`)
         }
 
         this.writeLine()
@@ -40,7 +59,7 @@ export class VueNextRuntimeGenerator extends RuntimeGenerator {
         this.writeLine()
 
         this.writeLine('// 图标配置Provider')
-        this.writeLine(`export const ${this.getTypeName('provider')} = (config: ${this.getInterfaceName('config')}) => {`)
+        this.writeLine(`export const ${this.getTypeName('provider')} = (config: DeepPartial<${this.getInterfaceName('config')}>) => {`)
         this.indent(1)
         this.writeLine(`provide(${this.getTypeName('context')}, config)`)
         this.indent(-1)

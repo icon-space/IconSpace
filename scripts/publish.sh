@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# 发布版本
 function pub(){
     # 获取项目名
     package="@icon-space/$1"

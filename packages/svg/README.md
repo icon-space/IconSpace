@@ -94,10 +94,10 @@ If you need to use additional information such as icon name, author, category, l
 
 | prop           | description                             | type                                                             | default        | note |
 | -------------- | --------------------------------------- | ---------------------------------------------------------------- | -------------- | ---- |
-| theme          | Theme of the icons.                     | 'outline' &#124; 'filled' &#124; 'two-tone' &#124; 'multi-color' | 'outline'      |
-| size           | The width/height of the icon            | number &#124; string                                             | '1em'          |
-| spin           | Rotate icon with animation              | boolean                                                          | false          |
-| fill           | Colors of theme                         | string &#124; string[]                                           | 'currentColor' |
-| strokeLinecap  | the stroke-linecap prop of svg element  | 'butt' &#124; 'round' &#124; 'square'                            | 'round'        |
-| strokeLinejoin | the stroke-linejoin prop of svg element | 'miter' &#124; 'round' &#124; 'bevel'                            | 'round'        |
-| strokeWidth    | the stroke-width prop of svg element    | number                                                           | 4              |
+| theme          | Theme of the icons.                     | 'outline' &#124; 'filled' &#124; 'two-tone' &#124; 'multi-color' | 'outline'      |      |
+| size           | The width/height of the icon            | number &#124; string                                             | '1em'          |      |
+| spin           | Rotate icon with animation              | boolean                                                          | false          |      |
+| fill           | Colors of theme                         | string &#124; string[]                                           | 'currentColor' |      |
+| strokeLinecap  | the stroke-linecap prop of svg element  | 'butt' &#124; 'round' &#124; 'square'                            | 'round'        |      |
+| strokeLinejoin | the stroke-linejoin prop of svg element | 'miter' &#124; 'round' &#124; 'bevel'                            | 'round'        |      |
+| strokeWidth    | the stroke-width prop of svg element    | number                                                           | 4              |      |

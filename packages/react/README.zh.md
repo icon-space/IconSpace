@@ -160,6 +160,7 @@ export function Demo(props: { type: IconType }): JSX.Element {
 | strokeLinecap  | svg 元素的 stroke-linecap 属性              | 'butt' &#124; 'round' &#124; 'square'                            | 'round'        |
 | strokeLinejoin | svg 元素的 stroke-linejoin 属性             | 'miter' &#124; 'round' &#124; 'bevel'                            | 'round'        |
 | strokeWidth    | svg 元素的 stroke-width 属性                | number                                                           | 4              |
+| tag            | 包裹 svg 的标签                             | string                                                           | span           |
 
 **其他属性**
 你可以使用定义的`HTMLAttributes<HTMLSpanElement>>`上的全部属性，比如：
