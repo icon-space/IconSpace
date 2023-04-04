@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.5(next)
+
+- **fix**: missing declaration files after Vue build
+- **fix**: 分类不准确 [IconPark#126](https://github.com/bytedance/IconPark/issues/126)
+
 ## v1.0.4
 
 - **feat**: 如何修改，生成的默认span标签，我想i标签作为标签，改如何做呢 [IconPark#389](https://github.com/bytedance/IconPark/issues/389)
