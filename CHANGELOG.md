@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.6
+
+- **fix**: empty tag does not take effect
+
 ## v1.0.5
 
 - **fix**: missing declaration files after Vue build

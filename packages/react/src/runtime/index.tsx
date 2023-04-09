@@ -230,7 +230,7 @@ export function IconConverter(id: string, icon: IIconBase, config: DeepPartial<I
     }
 
     return {
-        tag: icon.tag || config.tag || DEFAULT_ICON_CONFIGS.tag,
+        tag: icon.tag ?? config.tag ?? DEFAULT_ICON_CONFIGS.tag,
         size: icon.size || config.size || DEFAULT_ICON_CONFIGS.size,
         strokeWidth: icon.strokeWidth || config.strokeWidth || DEFAULT_ICON_CONFIGS.strokeWidth,
         strokeLinecap: icon.strokeLinecap || config.strokeLinecap || DEFAULT_ICON_CONFIGS.strokeLinecap,
