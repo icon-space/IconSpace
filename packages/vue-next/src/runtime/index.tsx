@@ -252,7 +252,6 @@ export function IconWrapper(name: string, rtl: boolean, render: IconRender): Ico
     const options: IconOptions = {
         name: 'icon-' + name,
         props: ['tag', 'size', 'strokeWidth', 'strokeLinecap', 'strokeLinejoin', 'theme', 'fill', 'spin'],
-        inheritAttrs: false,
         setup(props) {
             const id = guid()
 

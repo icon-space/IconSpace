@@ -260,7 +260,6 @@ export function IconWrapper(name: string, rtl: boolean, render: IconRender): Ico
         data() {
             return { id: guid() }
         },
-        inheritAttrs: false,
         render: function (this: IIconInstance, h: CreateElement): VNode {
             const { tag, size, strokeWidth, strokeLinecap, strokeLinejoin, theme, fill, id, spin, ICON_CONFIGS = DEFAULT_ICON_CONFIGS } = this
 

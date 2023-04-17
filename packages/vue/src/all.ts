@@ -25,7 +25,6 @@ function toPascalCase(val: string): string {
 const options: ComponentOptions<IIconSpaceInstance> = {
     name: 'icon-space',
     props: ['tag', 'type', 'theme', 'size', 'spin', 'fill', 'strokeLinecap', 'strokeLinejoin', 'strokeWidth'],
-    inheritAttrs: true,
     render(this: IIconSpaceInstance, h): VNode {
         const type = toPascalCase(this.type)
 

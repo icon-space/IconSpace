@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.7
+
+- **fix**: enable default component attribute transparent behavior
+- **add-icon**: Linux
+
 ## v1.0.6
 
 - **fix**: empty tag does not take effect

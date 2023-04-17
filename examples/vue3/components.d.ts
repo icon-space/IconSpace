@@ -8,7 +8,7 @@ import '@vue/runtime-core'
 export {}
 
 declare module '@vue/runtime-core' {
-    export interface GlobalComponents {
-        IconHome: typeof import('@icon-space/vue-next')['Home']
-    }
+  export interface GlobalComponents {
+    IconACane: typeof import('@icon-space/vue-next')['ACane']
+  }
 }
