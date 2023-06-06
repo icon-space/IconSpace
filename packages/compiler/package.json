@@ -12,7 +12,7 @@
     },
     "devDependencies": {
         "@types/css-tree": "^2.3.1",
-        "@types/lodash": "^4.14.191",
+        "@types/lodash": "^4.14.195",
         "@types/tinycolor2": "^1.4.3",
         "css-tree": "^2.3.1",
         "tinycolor2": "^1.6.0",

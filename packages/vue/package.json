@@ -1,6 +1,6 @@
 {
     "name": "@icon-space/vue",
-    "version": "1.0.7",
+    "version": "1.0.8-alpha.0",
     "description": "Vue Icons for IconSpace",
     "main": "lib/index.js",
     "module": "es/index.js",

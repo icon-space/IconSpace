@@ -5,7 +5,7 @@
 import { IconCompiler, IIconToolsOptions } from '@icon-space/compiler'
 import fs from 'fs'
 import p from 'path'
-import mkdirp from 'mkdirp'
+import { mkdirp } from 'mkdirp'
 import icons from '../source/icons.json'
 import iconsConfig from '../source/icons-config.json'
 

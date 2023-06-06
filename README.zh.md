@@ -38,4 +38,4 @@
 
 ### 加入我们
 
-![群](https://user-images.githubusercontent.com/41979509/222069693-3df322d9-d914-4d25-a7d3-6549f3a82127.jpeg)
+<img src="https://user-images.githubusercontent.com/41979509/222069693-3df322d9-d914-4d25-a7d3-6549f3a82127.jpeg" width="160" />
